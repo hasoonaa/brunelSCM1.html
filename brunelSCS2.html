@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brunel University Sports Centre - Sports</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3, h4 {
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: #003366;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #004d99;
+            text-decoration: none;
+        }
+
+        
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        nav li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #004d99;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        
+        .sports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .sport-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .sport-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .sport-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .sport-card-content {
+            padding: 20px;
+        }
+
+        .testimonial {
+            background-color: #e6f0ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        
+        @media screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .sports-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Brunel University Sports Centre</div>
+                <div class="hamburger" id="hamburger">☰</div>
+                <ul id="nav-menu">
+                    <li><a href="brunelSCM1.html">Home</a></li>
+                    <li><a href="brunelSCS2.html" class="active">Sports</a></li>
+                    <li><a href="brunelSCSP3.html">Shop</a></li>
+                    <li><a href="brunelSCMM4.html">Membership</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Sports Programs at Brunel</h1>
+        
+        <p>At Brunel University, we offer a wide range of sports programs to cater to all interests and skill levels. Whether you're looking to try something new, stay fit, or compete at the highest levels, we have something for you!</p>
+        
+        <div class="sports-grid">
+            <div class="sport-card">
+                <img src="badminton.jpg">
+                <div class="sport-card-content">
+                    <h3>Badminton</h3>
+                    <p>Our state-of-the-art courts provide the perfect environment for both casual play and competitive matches. With coaching available at all levels, badminton is one of our most popular sports.</p>
+                    <p><strong>Practice Days:</strong> Monday, Wednesday, Friday</p>
+                    <p><strong>Team Selection:</strong> Trials held in October each year</p>
+                    <a href="updated-form-html.html" class="btn">Join Now</a>
+                </div>
+            </div>
+            
+            <div class="sport-card">
+                <img src="Wheelchair-basketball.jpg">
+                <div class="sport-card-content">
+                    <h3>Basketball</h3>
+                    <p>Our basketball program caters to players of all abilities. With men's and women's teams competing in university leagues, we offer professional coaching and regular practice sessions.</p>
+                    <p><strong>Practice Days:</strong> Tuesday, Thursday, Saturday</p>
+                    <p><strong>Team Selection:</strong> Ongoing assessment throughout the year</p>
+                    <a href="updated-form-html.html" class="btn">Join Now</a>
+                </div>
+            </div>
+            
+            <div class="sport-card">
+                <img src="swimmingBPC.jpeg">
+                <div class="sport-card-content">
+                    <h3>Swimming</h3>
+                    <p>Our Olympic-sized swimming pool is home to our swimming program. With lanes dedicated to different abilities, everyone from beginners to competitive swimmers can come and join us.</p>
+                    <p><strong>Practice Days:</strong> Daily sessions available</p>
+                    <p><strong>Team Selection:</strong> Time trials held quarterly</p>
+                    <a href="updated-form-html.html" class="btn">Join Now</a>
+                </div>
+            </div>
+            
+            <div class="sport-card">
+                <img src="Football-Brunel-10-4284.jpg">
+                <div class="sport-card-content">
+                    <h3>Football</h3>
+                    <p>Our football program is one of the largest at Brunel. With multiple teams competing at different levels, there's a place for everyone who wants to play the beautiful game.</p>
+                    <p><strong>Practice Days:</strong> Monday, Wednesday, Saturday</p>
+                    <p><strong>Team Selection:</strong> Pre-season trials in September</p>
+                    <a href="updated-form-html.html" class="btn">Join Now</a>
+                </div>
+            </div>
+            
+            <div class="sport-card">
+                <img src="tennisBPC.jpeg">
+                <div class="sport-card-content">
+                    <h3>Tennis</h3>
+                    <p>Our tennis courts are available year-round, with indoor facilities for when the weather doesn't cooperate. Regular coaching sessions and competitive matches are organized throughout the year.</p>
+                    <p><strong>Practice Days:</strong> Tuesday, Thursday, Sunday</p>
+                    <p><strong>Team Selection:</strong> Based on ranking matches held monthly</p>
+                    <a href="updated-form-html.html" class="btn">Join Now</a>
+                </div>
+            </div>
+            
+            <div class="sport-card">
+                <img src="athleticsBPC.jpg">
+                <div class="sport-card-content">
+                    <h3>Athletics</h3>
+                    <p>Our athletics program covers everything from track events to field disciplines. With professional coaching and excellent facilities, we've produced several national champions.</p>
+                    <p><strong>Practice Days:</strong> Monday, Wednesday, Friday</p>
+                    <p><strong>Team Selection:</strong> Based on performance at university trials</p>
+                    <a href="updated-form-html.html" class="btn">Join Now</a>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Student Success Stories</h2>
+        
+        <div class="testimonial">
+            <h3>Emma Thompson - National Swimming Champion</h3>
+            <p>"When I joined Brunel, I was a good swimmer but lacked the technical refinement needed to compete at the highest level. The coaching I received at the Brunel Sports Centre transformed my technique and approach to training. The flexible scheduling allowed me to balance my academic studies with my athletic pursuits, and the state-of-the-art facilities gave me everything I needed to excel. I'm proud to say that I've now represented both Brunel and my country in international competitions."</p>
+        </div>
+        
+        <div class="testimonial">
+            <h3>James Chen - University Basketball Captain</h3>
+            <p>"The basketball program at Brunel completely changed my university experience. Coming from a school where basketball wasn't a major sport, I found a community of players and coaches who were passionate about developing my skills. The regular practice sessions, competitive matches, and fitness support have helped me become a more complete player. Being selected as team captain in my final year has been the highlight of my time at Brunel."</p>
+        </div>
+        
+        <div class="testimonial">
+            <h3>Aisha Patel - Athletics Scholarship Recipient</h3>
+            <p>"The athletics program at Brunel provided me with the perfect environment to develop as both a student and an athlete. The coaching staff understood the challenges of balancing academic demands with athletic training, and they created personalized programs that allowed me to excel in both areas. The indoor and outdoor facilities meant that I could train year-round, regardless of the weather. Thanks to the support I received, I secured a sports scholarship that has helped fund my education."</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Brunel University Sports Centre. All rights reserved.</p>
+            <p>Kingston Lane, Uxbridge, Middlesex, UB8 3PH</p>
+            <p>Tel: 01895 274000 | Email: sports@brunel.ac.uk</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    navMenu.classList.toggle('show');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

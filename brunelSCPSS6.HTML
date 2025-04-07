@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .payment-summary {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            border-left: 4px solid #3498db;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+
+        .input-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .input-row .form-group {
+            flex: 1;
+        }
+
+        .error {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        input.invalid {
+            border-color: #e74c3c;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        button:disabled {
+            background-color: #95a5a6;
+            cursor: not-allowed;
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            background-color: #2ecc71;
+            color: white;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        
+        a:focus, button:focus, input:focus {
+            outline: 2px solid #3498db;
+            outline-offset: 2px;
+        }
+
+        
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 10px;
+            background: #3498db;
+            color: white;
+            padding: 10px;
+            z-index: 100;
+        }
+        
+        .skip-link:focus {
+            left: 10px;
+        }
+
+        
+        @media (max-width: 480px) {
+            .input-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#payment-form" class="skip-link">Skip to payment form</a>
+    
+    <div class="container">
+        <h1>Payment Details</h1>
+        
+        <form id="payment-form">
+            <div class="form-group">
+                <label for="cardholderName">Cardholder Name</label>
+                <input type="text" id="cardholderName" name="cardholderName" autocomplete="cc-name" required pattern="[A-Za-z ]{2,}">
+                <p class="error" id="cardholderName-error">Please enter the cardholder's name</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" autocomplete="cc-number" required pattern="[0-9 ]{13,19}">
+                <p class="error" id="cardNumber-error">Please enter a valid card number</p>
+            </div>
+            
+            <div class="input-row">
+                <div class="form-group">
+                    <label for="expiryDate">Expiry Date (MM/YY)</label>
+                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5" autocomplete="cc-exp" required pattern="(0[1-9]|1[0-2])\/[0-9]{2}">
+                    <p class="error" id="expiryDate-error">Please enter a valid expiration date (MM/YY)</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cvc">CVC</label>
+                    <input type="text" id="cvc" name="cvc" placeholder="XXX" maxlength="4" autocomplete="cc-csc" required pattern="[0-9]{3,4}">
+                    <p class="error" id="cvc-error">Please enter a valid CVC code (3-4 digits)</p>
+                </div>
+            </div>
+            
+            <button type="submit" id="submit-btn">Pay Now</button>
+        </form>
+        
+        <div class="success-message" id="success-message">
+            Payment Successful
+        </div>
+    </div>
+</body>
+</html>

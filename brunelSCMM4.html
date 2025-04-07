@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership - Brunel University Sports Centre</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+       
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        
+        nav {
+            background-color: #004080;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #0066cc;
+        }
+
+        
+        main {
+            padding: 30px 0;
+            min-height: 60vh;
+        }
+
+        h1 {
+            color: #003366;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        h2 {
+            color: #004080;
+            margin: 15px 0;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .membership-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .benefits-list {
+            list-style-type: none;
+            margin: 20px 0;
+        }
+
+        .benefits-list li {
+            margin-bottom: 10px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            color: #0066cc;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .membership-image {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+            font-size: 1.1rem;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background-color: #0066cc;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #004080;
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="container">
+            <div class="logo">Brunel University Sports Centre</div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="brunelSCM1.html">Home</a></li>
+                <li><a href="brunelSCS2.html">Sports</a></li>
+                <li><a href="brunelSCSP3.html">Shop</a></li>
+                <li><a href="brunelSCMM4.html" class="active">Membership</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <div class="container">
+            <h1>Sports Centre Membership</h1>
+            <p>Join Brunel University Sports Centre and enjoy exclusive benefits and access to our state-of-the-art facilities.</p>
+
+            <div class="membership-section">
+                <h2>Membership Benefits</h2>
+                <ul class="benefits-list">
+                    <li>Free unlimited access to the university gym</li>
+                    <li>Free bike rentals for up to 3 hours per day</li>
+                    <li>Free sports equipment rental (subject to availability)</li>
+                    <li>25% discount on all fitness classes</li>
+                    <li>Priority booking for sports facilities</li>
+                    <li>Monthly fitness assessment with our expert trainers</li>
+                    <li>Access to exclusive members-only events</li>
+                </ul>
+
+                <h2>Membership Fees</h2>
+                <p>Students: £120 per academic year or £45 per term</p>
+                <p>Staff: £180 per year or £60 per term</p>
+                <p>Alumni: £220 per year or £75 per term</p>
+
+
+                <a href="updated-form-html.html" class="btn">Join Now</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Brunel University Sports Centre. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

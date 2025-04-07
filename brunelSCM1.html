@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brunel University Sports Centre - Home</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3, h4 {
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: #003366;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #004d99;
+            text-decoration: none;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin-top: 10px;
+            margin-left: 0;
+        }
+
+        nav li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #004d99;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        
+        .slideshow {
+            position: relative;
+            max-width: 100%;
+            height: 400px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .slideshow img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slideshow img.active {
+            opacity: 1; 
+        }
+
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .director-quote {
+            background-color: #e6f0ff;
+            padding: 20px;
+            border-left: 5px solid #003366;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        
+        @media screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .slideshow {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Brunel University Sports Centre</div>
+                <div class="hamburger" id="hamburger">☰</div>
+                <ul id="nav-menu">
+                    <li><a href="brunelSCM1.html" class="active">Home</a></li>
+                    <li><a href="brunelSCS2.html">Sports</a></li>
+                    <li><a href="brunelSCSP3.html">Shop</a></li>
+                    <li><a href="brunelSCMM4.html">Membership</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="slideshow" id="home-slideshow">
+            <img src="11-2.jpg" alt="Brunel University Sports Centre exterior view" class="active">
+            <img src="Wheelchair-basketball.jpg" alt="Basketball court at Brunel University">
+            <img src="swimmingBPC.jpeg" alt="Swimming pool facilities at Brunel University">
+            <img src="ATHLETICSbpc.jpeg" alt="Athletics track at Brunel University">
+        </div>
+
+        <h1>Welcome to Brunel University Sports Centre</h1>
+        
+        <p>Established in 1966, the Brunel University Sports Centre has been at the heart of student athletic development for over five decades. Originally founded as a modest facility with just a gymnasium and a small outdoor field, it has grown into one of the premier university sports complexes in the United Kingdom.</p>
+        
+        <p>Our mission is to provide state-of-the-art facilities and expert coaching to support both recreational athletes and those competing at the highest levels. We believe that physical activity is an essential component of a well-rounded education and personal development.</p>
+        
+        <div class="director-quote">
+            <h3>A Message from our Director</h3>
+            <p>"At Brunel University Sports Centre, we strive to create an inclusive environment where all students can discover their athletic potential. Our world-class facilities and dedicated staff are committed to helping every student achieve their personal fitness goals, whether that's maintaining a healthy lifestyle or competing at an elite level. We're not just building athletes; we're developing well-rounded individuals who understand the value of teamwork, perseverance, and dedication."</p>
+            <p><strong>- Dr. Sarah Williams, Sports Director</strong></p>
+        </div>
+        
+        <h2>Our Facilities</h2>
+        
+        <p>The Brunel University Sports Centre boasts an impressive range of facilities designed to cater to all sporting needs:</p>
+        
+        <ul>
+            <li>Olympic-sized swimming pool</li>
+            <li>Multi-purpose sports hall</li>
+            <li>State-of-the-art fitness center with the latest equipment</li>
+            <li>Indoor running track</li>
+            <li>Outdoor athletics track</li>
+            <li>Tennis and squash courts</li>
+            <li>Football, rugby, and cricket pitches</li>
+            <li>Dance and yoga studios</li>
+            <li>Climbing wall</li>
+        </ul>
+        
+        <h2>Student Experiences</h2>
+        
+        <div class="video-container">
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/pNG2klqK4wk?si=fHyxN2lzQyilzKHt"> 
+            title="Student testimonials about Brunel University Sports Centre"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+        </div>
+        
+        <p>Hear directly from our students about how the Brunel Sports Centre has impacted their university experience and athletic development. From casual participants to competitive athletes, our facilities and programs have something to offer everyone.</p>
+        
+        <h2>Opening Hours</h2>
+        
+        <p>The Sports Centre is open seven days a week to accommodate the busy schedules of our students and staff:</p>
+        
+        <ul>
+            <li>Monday to Friday: 6:00 AM - 10:00 PM</li>
+            <li>Saturday and Sunday: 8:00 AM - 8:00 PM</li>
+            <li>Bank Holidays: 10:00 AM - 6:00 PM</li>
+        </ul>
+        
+        <p>Ready to get started? Explore our <a href="brunelSCS2.html">sports programs</a> or learn about <a href="brunelSCMM4.html">membership options</a>.</p>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Brunel University Sports Centre. All rights reserved.</p>
+            <p>Kingston Lane, Uxbridge, Middlesex, UB8 3PH</p>
+            <p>Tel: 01895 274000 | Email: sports@brunel.ac.uk</p>
+        </div>
+    </footer> 
+
+    <script>
+
+     document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('#home-slideshow img');
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                slides[index].classList.add('active');
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+           
+            setInterval(nextSlide, 5000);
+            
+            
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    navMenu.classList.toggle('show');
+                });
+            }
+        });
+    </script>
+   </body>
+</html>
